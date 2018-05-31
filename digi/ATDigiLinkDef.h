@@ -10,6 +10,7 @@
 #pragma link C++ class ATSimulatedPoint+;
 #pragma link C++ class ATTrigger+;
 #pragma link C++ class ATTriggerTask+;
+#pragma link C++ class ATProjector+;
 
 
 #endif
