@@ -185,4 +185,23 @@ std::pair<Int_t,Int_t> AtTpc::DecodePdG(Int_t PdG_Code) {
   return nucleus;
 }
 
+
+Int_t AtTpc::GetTrackStatus(bool NewTrack,
+			      bool TrackDisappeared,
+			      bool TrackStop,
+			      bool TrackAlive,
+			      bool TrackEntering,
+			      bool TrackExiting,
+			      bool TrackInside,
+			      bool TrackOut) {
+  int trackstatus =
+    1*TrackOut+10*TrackInside+
+    100*TrackExiting+1000*TrackEntering+
+    10000*TrackAlive + 100000*TrackStop +
+    1000000*TrackDisappeared + 10000000*NewTrack;
+  
+  return trackstatus;
+  
+}
+
 ClassImp(AtTpc)
